@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MR. GOOD - KARGIA KARGIA! | ოფიციალური ვებსაიტი & ჩამოტვირთვა</title>
+  <meta name="description" content="ჩამოტვირთეთ Mr. Good (მისტერ გუდი - კარგია კარგია!). 2D რეტრო პიქსელ პლატფორმერი PC-სა და მობილურზე (Android & iOS). 100% უფასო!">
+  <link rel="icon" type="image/jpeg" href="assets/images/mr_good_icon.jpg">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span class="badge" data-i18n="badgeNew">ახალი ვერსია</span>
+    <span data-i18n="announcement">🔥 ვერსია 1.0.4 გამოვიდა! ჩამოტვირთეთ PC-ზე და Android-ზე!</span>
+  </div>
+
+  <!-- Main Sticky Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo-area">
+        <div class="logo-icon pixel-art">
+          <img src="assets/images/mr_good_icon.jpg" alt="Mr Good Logo">
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">MR. GOOD</span>
+          <span class="logo-subtitle">კარგია კარგია!</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link" data-i18n="navHome">მთავარი</a></li>
+          <li><a href="#download" class="nav-link has-badge" data-i18n="navDownload">ჩამოტვირთვა</a></li>
+          <li><a href="#features" class="nav-link" data-i18n="navFeatures">მახასიათებლები</a></li>
+          <li><a href="#screenshots" class="nav-link" data-i18n="navScreenshots">სქრინშოტები</a></li>
+          <li><a href="#specs" class="nav-link" data-i18n="navSpecs">მოთხოვნები</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="navFaq">კითხვები</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Coin Counter, Audio, CRT, Language, Download CTA) -->
+      <div class="nav-actions">
+        <!-- Interactive Coin Counter (Matches screenshot's 114 coin counter) -->
+        <div class="coin-counter" id="coinCounterBtn" title="ოქროს თესლები / Click for Easter Egg!">
+          <span class="coin-icon"></span>
+          <span class="coin-number" id="coinCountDisplay">114</span>
+        </div>
+
+        <!-- 8-bit Audio Toggle -->
+        <button class="icon-btn active" id="soundToggleBtn" title="Toggle 8-bit Sound FX" aria-label="Toggle Sound">
+          🔊
+        </button>
+
+        <!-- Retro CRT Scanline Toggle -->
+        <button class="icon-btn" id="crtToggleBtn" title="Toggle CRT Retro Filter" aria-label="Toggle CRT">
+          📺
+        </button>
+
+        <!-- Language Toggle Button -->
+        <button class="lang-toggle-btn" id="langToggleBtn" title="შეცვალეთ ენა / Switch Language">
+          <span class="lang-flag" id="currentLangFlag">🇬🇪</span>
+          <span id="currentLangText">ქართული</span>
+        </button>
+
+        <!-- Quick Download CTA -->
+        <a href="#download" class="nav-download-btn">
+          <span>⚡</span>
+          <span data-i18n="quickDownload">ჩამოტვირთვა</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       HERO SECTION - Sunset Sky & Game Title Screen
+       =================================================================== -->
+  <section class="hero-section" id="home">
+    <!-- Parallax Pixel Scenery Layers -->
+    <div class="scenery-layer pixel-clouds"></div>
+    <div class="scenery-layer pixel-mountains"></div>
+    <div class="scenery-layer pixel-hills"></div>
+    <div class="pixel-ground-wood"></div>
+
+    <div class="hero-content">
+      <!-- Left Column: Headlines & Instant Download -->
+      <div class="hero-left">
+        <div class="hero-badge-row">
+          <span class="pixel-chip chip-geo">🇬🇪 MADE IN GEORGIA</span>
+          <span class="pixel-chip chip-gold" data-i18n="gameTag">ქართული 2D პიქსელ თამაში • მობილური & PC</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap; margin: 0.5rem 0;">
+          <div class="hero-avatar-badge pixel-art" style="width:78px; height:78px; border-radius:50%; border:3px solid var(--gold); overflow:hidden; box-shadow:0 0 20px var(--gold-glow); flex-shrink:0; background:#24143a;">
+            <img src="assets/images/mr_good_icon.jpg" alt="Mr Good Official Avatar" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <h1 class="hero-game-title" style="margin:0;">
+            MR. <span class="title-good">GOOD</span>
+          </h1>
+        </div>
+
+        <div class="kargia-banner">
+          <div class="kargia-en" data-i18n="heroCatchphrase">კარგია კარგია!</div>
+          <div class="kargia-ge" data-i18n="heroCatchphraseGe">KARGIA KARGIA!</div>
+        </div>
+
+        <p class="hero-description" data-i18n="heroDesc">
+          გაიცანით მისტერ გუდი უმაგრეს 2D რეტრო პლატფორმერში! იხტუნეთ, აგროვეთ ოქროს თესლები, გახსენით უნიკალური პერსონაჟები და გაერთეთ. 100% უფასო Windows PC-ზე და მობილურზე.
+        </p>
+
+        <!-- Instant Download CTAs -->
+        <div class="hero-cta-group">
+          <!-- Windows PC Direct Download -->
+          <button class="btn-pixel-play" onclick="triggerDownload('windows', 'MrGood_v1.0.4_Windows.zip', 'downloads/MrGood_v1.0.4_Windows.zip')">
+            <span>💻</span>
+            <span data-i18n="btnDownloadPc">ჩამოტვირთვა PC-სთვის</span>
+          </button>
+
+          <!-- Android APK Direct Download -->
+          <button class="btn-pixel-secondary" onclick="triggerDownload('android', 'MrGood_v1.0.4.apk', 'downloads/MrGood_v1.0.4.apk')">
+            <span>📱</span>
+            <span data-i18n="btnDownloadApk">ჩამოტვირთვა ANDROID-ისთვის</span>
+          </button>
+        </div>
+
+        <!-- Detected OS Indicator -->
+        <div class="os-detect-badge">
+          <span>✨</span>
+          <span data-i18n="osDetected">თქვენი მოწყობილობა: </span>
+          <span id="userOsName">Windows PC</span>
+          <span class="pixel-chip" style="font-size:0.65rem; padding: 0.15rem 0.4rem; background:#14532d; color:#86efac; border-color:#22c55e;">
+            READY
+          </span>
+        </div>
+
+        <!-- Quick Stats Badge Row -->
+        <div style="display:flex; gap:1.25rem; flex-wrap:wrap; margin-top:0.5rem; font-size:0.85rem; font-weight:700; color:#241238;">
+          <div>⭐ <span data-i18n="statRating">4.9/5 შეფასება</span></div>
+          <div>📦 <span data-i18n="statDownloads">50,000+ ჩამოტვირთვა</span></div>
+          <div>🎉 <span data-i18n="statFree">100% უფასო</span></div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Game Screen Frame -->
+      <div class="hero-right">
+        <div class="game-preview-card">
+          <div class="game-screen-wrapper">
+            <img src="assets/images/mr_good_title_screen.png" alt="Mr Good Title Screen" class="game-screen-img pixel-art">
+            
+            <!-- Interactive hotspot buttons over PLAY, CONTINUE, SHOP, SETTINGS from screenshot -->
+            <div class="preview-overlay-btn btn-pos-play" data-action="play" title="Play Now / Scroll to Downloads"></div>
+            <div class="preview-overlay-btn btn-pos-continue" data-action="continue" title="Continue Game"></div>
+            <div class="preview-overlay-btn btn-pos-shop" data-action="shop" title="Coin Shop (114 Seeds)"></div>
+            <div class="preview-overlay-btn btn-pos-settings" data-action="settings" title="System Settings"></div>
+          </div>
+          
+          <div class="game-card-footer">
+            <div class="live-indicator">
+              <span class="live-dot"></span>
+              <span data-i18n="liveStatus">სერვერი ონლაინ • სწრაფი CDN</span>
+            </div>
+            <span style="color:var(--gold); font-weight:700;">v1.0.4 OFFICIAL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       DOWNLOAD HUB SECTION (Core Requirement)
+       =================================================================== -->
+  <section class="section" id="download">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="sectionTag">ოფიციალური ვერსიები</span>
+      <h2 class="section-title" data-i18n="sectionTitle">ჩამოტვირთეთ MR. GOOD</h2>
+      <p class="section-subtitle" data-i18n="sectionSubtitle">
+        აირჩიეთ თქვენი პლატფორმა. უსაფრთხო, პირდაპირი, შემოწმებული და სრულიად უფასო.
+      </p>
+    </div>
+
+    <!-- Download Platform Tabs Navigation -->
+    <div class="download-tabs-wrapper">
+      <button class="download-tab-btn active" data-tab="pc">
+        <span data-i18n="tabPc">🖥️ Windows (PC)</span>
+        <span class="tab-badge">v1.0.4</span>
+      </button>
+      <button class="download-tab-btn" data-tab="android">
+        <span data-i18n="tabAndroid">📱 Android</span>
+        <span class="tab-badge">APK</span>
+      </button>
+      <button class="download-tab-btn" data-tab="ios">
+        <span data-i18n="tabIos">🍏 iOS (Apple)</span>
+        <span class="tab-badge">Beta</span>
+      </button>
+      <button class="download-tab-btn" data-tab="specs">
+        <span data-i18n="tabSpecs">⚙️ სისტემური მოთხოვნები</span>
+      </button>
+      <button class="download-tab-btn" data-tab="patch">
+        <span data-i18n="tabPatch">📜 განახლებები</span>
+      </button>
+      <button class="download-tab-btn" data-tab="controls">
+        <span data-i18n="tabControls">🎮 მართვა</span>
+      </button>
+    </div>
+
+    <!-- ==================== TAB 1: WINDOWS PC ==================== -->
+    <div class="download-panel active" id="tab-pc">
+      <div class="download-cards-grid">
+        <!-- Direct ZIP Download Card (Featured) -->
+        <div class="download-card featured-card">
+          <span class="featured-ribbon">RECOMMENDED</span>
+          <div class="card-top">
+            <div class="platform-icon-box">💻</div>
+            <div class="card-meta">
+              <h3 data-i18n="pcDirectTitle">Windows PC (პირდაპირი)</h3>
+              <p data-i18n="pcDirectSub">Standalone zip ინსტალატორი • v1.0.4</p>
+              <div style="margin-top:0.35rem;">
+                <span class="pixel-chip chip-gold" data-i18n="pcDirectSize">185 მბ</span>
+                <span class="pixel-chip" style="background:#064e3b; color:#6ee7b7; border-color:#10b981;">VIRUS CLEAN</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> <span data-i18n="pcFeat1">სრული ოფლაინ თამაში 60+ FPS მხარდაჭერით</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="pcFeat2">კლავიატურის, მაუსის და ჯოისტიკის (Xbox/PS) მხარდაჭერა</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="pcFeat3">შემოწმებულია VirusTotal-ით (0 საფრთხე)</span></li>
+            <li><span class="check-icon">✓</span> <span>თავსებადია Windows 10 & 11 (64-bit / 32-bit)</span></li>
+          </ul>
+
+          <button class="download-cta-btn btn-gold" onclick="triggerDownload('windows', 'MrGood_v1.0.4_Windows.zip', 'downloads/MrGood_v1.0.4_Windows.zip')">
+            <span>📥</span>
+            <span data-i18n="btnDownloadZip">ჩამოტვირთეთ WINDOWS ZIP</span>
+          </button>
+        </div>
+
+        <!-- Steam Edition Card -->
+        <div class="download-card">
+          <div class="card-top">
+            <div class="platform-icon-box">🎮</div>
+            <div class="card-meta">
+              <h3 data-i18n="pcSteamTitle">Steam ვერსია</h3>
+              <p data-i18n="pcSteamSub">ითამაშეთ Steam-ის მეშვეობით</p>
+              <div style="margin-top:0.35rem;">
+                <span class="pixel-chip">STEAM CLOUD</span>
+                <span class="pixel-chip">ACHIEVEMENTS</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> <span>Steam Achievements & ქართული ბეიჯები</span></li>
+            <li><span class="check-icon">✓</span> <span>Steam Cloud Saves ყველა კომპიუტერზე</span></li>
+            <li><span class="check-icon">✓</span> <span>ავტომატური განახლებები და Steam Workshop</span></li>
+            <li><span class="check-icon">✓</span> <span>Steam Deck ოფიციალური თავსებადობა</span></li>
+          </ul>
+
+          <button class="download-cta-btn btn-purple" onclick="alert('Steam გვერდი მალე გაიხსნება! გთხოვთ გამოიყენოთ პირდაპირი Windows ZIP ვერსია.')">
+            <span>🚀</span>
+            <span data-i18n="btnSteam">დაამატეთ STEAM-ზე</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Installation Guide Box -->
+      <div class="hardware-checker-box">
+        <h4 style="font-family:var(--font-pixel); color:var(--gold); margin-bottom:1rem;" data-i18n="installTitle">
+          ინსტალაციის მარტივი ინსტრუქცია
+        </h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; font-size:0.92rem; color:var(--text-muted);">
+          <div style="background:#130823; padding:1rem; border-radius:8px; border-left:3px solid var(--gold);">
+            <strong style="color:#fff;" data-i18n="step1Pc">1. ჩამოტვირთეთ ZIP ფაილი</strong>
+            <p style="font-size:0.85rem; margin-top:0.35rem;">დააჭირეთ ღილაკს "ჩამოტვირთეთ WINDOWS ZIP" და შეინახეთ ფაილი.</p>
+          </div>
+          <div style="background:#130823; padding:1rem; border-radius:8px; border-left:3px solid #a855f7;">
+            <strong style="color:#fff;" data-i18n="step2Pc">2. ამოაარქივეთ ZIP ფოლდერი</strong>
+            <p style="font-size:0.85rem; margin-top:0.35rem;">დააწკაპუნეთ მარჯვენა ღილაკით და აირჩიეთ "Extract All" (ამოარქივება).</p>
+          </div>
+          <div style="background:#130823; padding:1rem; border-radius:8px; border-left:3px solid #22c55e;">
+            <strong style="color:#fff;" data-i18n="step3Pc">3. გახსენით 'Launch_MrGood.bat'</strong>
+            <p style="font-size:0.85rem; margin-top:0.35rem;">ორჯერ დააწკაპუნეთ და დაიწყეთ თამაში! KARGIA KARGIA!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 2: ANDROID ==================== -->
+    <div class="download-panel" id="tab-android">
+      <div class="download-cards-grid">
+        <!-- Direct APK Download Card -->
+        <div class="download-card featured-card">
+          <span class="featured-ribbon">DIRECT APK</span>
+          <div class="card-top">
+            <div class="platform-icon-box">🤖</div>
+            <div class="card-meta">
+              <h3 data-i18n="apkDirectTitle">პირდაპირი Android APK</h3>
+              <p data-i18n="apkDirectSub">პირდაპირი საინსტალაციო ფაილი • v1.0.4</p>
+              <div style="margin-top:0.35rem;">
+                <span class="pixel-chip chip-gold" data-i18n="apkSize">78 მბ</span>
+                <span class="pixel-chip" style="background:#064e3b; color:#6ee7b7; border-color:#10b981;">NO ADS</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> <span data-i18n="apkFeat1">თავსებადია Android 7.0 და ზემოთ ვერსიებთან</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="apkFeat2">მოქნილი სენსორული მართვა და ჯოისტიკის მხარდაჭერა</span></li>
+            <li><span class="check-icon">✓</span> <span data-i18n="apkFeat3">ენერგოეფექტური პიქსელ გრაფიკა</span></li>
+            <li><span class="check-icon">✓</span> <span>თავსებადია Samsung, Xiaomi, Pixel და სხვებზე</span></li>
+          </ul>
+
+          <button class="download-cta-btn btn-gold" onclick="triggerDownload('android', 'MrGood_v1.0.4.apk', 'downloads/MrGood_v1.0.4.apk')">
+            <span>📥</span>
+            <span data-i18n="btnDownloadApkCard">ჩამოტვირთეთ ANDROID APK</span>
+          </button>
+        </div>
+
+        <!-- Google Play Store Card -->
+        <div class="download-card">
+          <div class="card-top">
+            <div class="platform-icon-box">▶️</div>
+            <div class="card-meta">
+              <h3 data-i18n="googlePlayTitle">Google Play Store</h3>
+              <p data-i18n="googlePlaySub">ავტომატური განახლებები Google Play-დან</p>
+              <div style="margin-top:0.35rem;">
+                <span class="pixel-chip">GOOGLE PLAY PASS</span>
+                <span class="pixel-chip">AUTO-UPDATE</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> <span>Google Play Games Leaderboards & მიღწევები</span></li>
+            <li><span class="check-icon">✓</span> <span>ღრუბლოვანი სინქრონიზაცია Google ანგარიშით</span></li>
+            <li><span class="check-icon">✓</span> <span>უსაფრთხოების სრული დაცვა Google Play Protect-ით</span></li>
+            <li><span class="check-icon">✓</span> <span>მყისიერი ავტომატური განახლებები</span></li>
+          </ul>
+
+          <button class="download-cta-btn btn-purple" onclick="alert('Google Play Store რეგისტრაცია მიმდინარეობს! გთხოვთ გამოიყენოთ პირდაპირი Android APK ღილაკი.')">
+            <span>📲</span>
+            <span data-i18n="btnPlayStore">GOOGLE PLAY-ზე გადასვლა</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Phone QR Code Card -->
+      <div class="qr-container">
+        <div class="qr-box">
+          <!-- Stylized QR Code image generated for direct download -->
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://mrgood.ge/download/apk" alt="Scan QR Code to download">
+        </div>
+        <div class="qr-info">
+          <h4 data-i18n="qrTitle">დაასკანერეთ მობილურით</h4>
+          <p data-i18n="qrDesc">მიუშვირეთ ტელეფონის კამერა QR კოდს და ჩამოტვირთეთ APK პირდაპირ მობილურზე.</p>
+          <div style="margin-top:0.5rem;">
+            <span class="pixel-chip" style="font-size:0.75rem;">📲 Android 7.0+ • 78 MB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 3: iOS ==================== -->
+    <div class="download-panel" id="tab-ios">
+      <div class="download-cards-grid">
+        <!-- App Store Card -->
+        <div class="download-card featured-card">
+          <span class="featured-ribbon">APPLE ECOSYSTEM</span>
+          <div class="card-top">
+            <div class="platform-icon-box">🍏</div>
+            <div class="card-meta">
+              <h3 data-i18n="iosAppTitle">Apple App Store</h3>
+              <p data-i18n="iosAppSub">iPhone & iPad თავსებადი</p>
+              <div style="margin-top:0.35rem;">
+                <span class="pixel-chip chip-gold">iOS 13.0+</span>
+                <span class="pixel-chip">IPHONE & IPAD</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> <span>მხარდაჭერილია iPhone 8-დან iPhone 16 Pro-მდე</span></li>
+            <li><span class="check-icon">✓</span> <span>iPadOS სრული ეკრანის და Apple Pencil-ის მენიუ</span></li>
+            <li><span class="check-icon">✓</span> <span>120Hz ProMotion ეკრანის მხარდაჭერა</span></li>
+            <li><span class="check-icon">✓</span> <span>Game Center მიღწევები და მეგობრები</span></li>
+          </ul>
+
+          <button class="download-cta-btn btn-gold" onclick="alert('iOS App Store ვერსია მალე იქნება ხელმისაწვდომი! შემოგვიერთდით TestFlight ბეტაში ქვემოთ.')">
+            <span>🍏</span>
+            <span data-i18n="btnAppStore">APP STORE-ზე გადასვლა</span>
+          </button>
+        </div>
+
+        <!-- TestFlight Beta Card -->
+        <div class="download-card">
+          <div class="card-top">
+            <div class="platform-icon-box">✈️</div>
+            <div class="card-meta">
+              <h3 data-i18n="testFlightTitle">TestFlight ბეტა ვერსია</h3>
+              <p data-i18n="testFlightSub">გამოსცადეთ ახალი დონეები პირველმა</p>
+              <div style="margin-top:0.35rem;">
+                <span class="pixel-chip">EARLY ACCESS</span>
+                <span class="pixel-chip">TESTFLIGHT</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="card-features-list">
+            <li><span class="check-icon">✓</span> <span>პირველმა გამოსცადეთ ახალი ქართული ლოკაციები</span></li>
+            <li><span class="check-icon">✓</span> <span>გაუგზავნეთ თქვენი იდეები უშუალოდ დეველოპერს</span></li>
+            <li><span class="check-icon">✓</span> <span>უფასო წვდომა ექსკლუზიურ პიქსელ სკინებზე</span></li>
+          </ul>
+
+          <button class="download-cta-btn btn-purple" onclick="alert('TestFlight მოსაწვევის მისაღებად მოგვწერეთ Discord-ზე ან Telegram-ზე!')">
+            <span>🛫</span>
+            <span data-i18n="btnTestFlight">TESTFLIGHT ბეტაში ჩართვა</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 4: SYSTEM SPECS ==================== -->
+    <div class="download-panel" id="tab-specs">
+      <div class="specs-table-container">
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th data-i18n="specCategory">კატეგორია</th>
+              <th data-i18n="specMin">მინიმალური მოთხოვნები</th>
+              <th data-i18n="specRec">რეკომენდებული მოთხოვნები</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong data-i18n="specOs">ოპერაციული სისტემა</strong></td>
+              <td>Windows 10 / Android 7.0 / iOS 13</td>
+              <td><span class="spec-badge">Windows 11 / Android 12+ / iOS 16+</span></td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="specCpu">პროცესორი</strong></td>
+              <td>Intel Core i3 2.0 GHz / Snapdragon 600</td>
+              <td><span class="spec-badge">Intel Core i5 / Snapdragon 800+</span></td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="specRam">ოპერატიული (RAM)</strong></td>
+              <td>2 GB RAM</td>
+              <td><span class="spec-badge">4 GB RAM (იდეალურია 60 FPS)</span></td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="specGpu">ვიდეო ბარათი</strong></td>
+              <td>DirectX 11 ინტეგრირებული / Adreno 506</td>
+              <td><span class="spec-badge">NVIDIA GTX 750 / Adreno 600+</span></td>
+            </tr>
+            <tr>
+              <td><strong data-i18n="specStorage">თავისუფალი ადგილი</strong></td>
+              <td>500 MB (PC) / 200 MB (მობილური)</td>
+              <td><span class="spec-badge">1 GB SSD / სწრაფი შიდა მეხსიერება</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Interactive Hardware Spec Checker Widget -->
+      <div class="hardware-checker-box">
+        <div class="checker-header">
+          <h4>🔍 სისტემის თავსებადობის ტესტი (Can I Run It?)</h4>
+          <span class="pixel-chip chip-gold">ინტერაქტიული</span>
+        </div>
+        <div class="checker-grid">
+          <div class="checker-field">
+            <label for="checkOsSelect">აირჩიეთ თქვენი OS:</label>
+            <select id="checkOsSelect">
+              <option value="win11">Windows 11 (64-bit)</option>
+              <option value="win10">Windows 10 (64-bit)</option>
+              <option value="android">Android Smartphone</option>
+              <option value="ios">iPhone / iPad</option>
+            </select>
+          </div>
+          <div class="checker-field">
+            <label for="checkRamSelect">აირჩიეთ ოპერატიული (RAM):</label>
+            <select id="checkRamSelect">
+              <option value="8">8 GB RAM ან მეტი</option>
+              <option value="4" selected>4 GB RAM</option>
+              <option value="2">2 GB RAM</option>
+              <option value="1">1 GB RAM</option>
+            </select>
+          </div>
+        </div>
+        <div class="checker-result-box">
+          <div id="checkResultText" class="checker-status">
+            ✅ <strong>იდეალურია!</strong> თქვენი სისტემა გაუშვებს Mr. Good-ს მაქსიმალურ 60+ FPS-ზე.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 5: PATCH NOTES ==================== -->
+    <div class="download-panel" id="tab-patch">
+      <div class="timeline">
+        <!-- v1.0.4 -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-version" data-i18n="patchLatest">v1.0.4 (უახლესი განახლება)</span>
+            <span class="timeline-date" data-i18n="patchDate">ოქტომბერი 2026</span>
+          </div>
+          <ul class="timeline-changes">
+            <li>
+              <span class="tag-new">NEW</span>
+              <span data-i18n="patch1">დაემატა სრული ქართული და ინგლისური ენების მხარდაჭერა</span>
+            </li>
+            <li>
+              <span class="tag-new">NEW</span>
+              <span data-i18n="patch2">გაუმჯობესდა მობილურის სენსორული ჯოისტიკის რეაქცია</span>
+            </li>
+            <li>
+              <span class="tag-new">NEW</span>
+              <span data-i18n="patch3">დაემატა ახალი საიდუმლო დონეები და ბონუს ეტაპები</span>
+            </li>
+            <li>
+              <span class="tag-fix">FIX</span>
+              <span data-i18n="patch4">გასწორდა ხმის სინქრონიზაცია Windows 11-ზე</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- v1.0.0 -->
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <span class="timeline-version">v1.0.0 (პირველი რელიზი)</span>
+            <span class="timeline-date">სექტემბერი 2026</span>
+          </div>
+          <ul class="timeline-changes">
+            <li>
+              <span class="tag-new">LAUNCH</span>
+              <span>Mr. Good-ის ოფიციალური დებიუტი 5 უნიკალური პერსონაჟით</span>
+            </li>
+            <li>
+              <span class="tag-new">CONTENT</span>
+              <span>12 ეტაპი თბილისის ძველი უბნების და მთის ციხესიმაგრეების თემატიკით</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 6: CONTROLS ==================== -->
+    <div class="download-panel" id="tab-controls">
+      <div class="hardware-checker-box">
+        <h4 style="font-family:var(--font-pixel); color:var(--gold); margin-bottom:1.5rem;">
+          🎮 მართვა და ღილაკები (PC & მობილური)
+        </h4>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+          <!-- PC Controls -->
+          <div style="background:#130823; padding:1.5rem; border-radius:12px; border:2px solid #57317a;">
+            <h5 style="font-family:var(--font-pixel-alt); font-size:1.1rem; color:#fff; margin-bottom:1rem;">
+              💻 კომპიუტერი (კლავიატურა)
+            </h5>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem; font-size:0.95rem;">
+              <li style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:var(--text-muted);">მოძრაობა (მარცხნივ/მარჯვნივ):</span>
+                <span><span class="key-badge">A</span> <span class="key-badge">D</span> ან <span class="key-badge">←</span> <span class="key-badge">→</span></span>
+              </li>
+              <li style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:var(--text-muted);">ნახტომი (Jump):</span>
+                <span class="key-badge">SPACE</span>
+              </li>
+              <li style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:var(--text-muted);">მოქმედება / დარტყმა:</span>
+                <span><span class="key-badge">J</span> ან <span class="key-badge">მარცხენა Click</span></span>
+              </li>
+              <li style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:var(--text-muted);">სწრაფი დეში (Dash):</span>
+                <span class="key-badge">SHIFT</span>
+              </li>
+              <li style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:var(--text-muted);">პაუზა / მენიუ:</span>
+                <span class="key-badge">ESC</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mobile Controls -->
+          <div style="background:#130823; padding:1.5rem; border-radius:12px; border:2px solid #57317a;">
+            <h5 style="font-family:var(--font-pixel-alt); font-size:1.1rem; color:#fff; margin-bottom:1rem;">
+              📱 მობილური (ეკრანის ღილაკები)
+            </h5>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.75rem; font-size:0.95rem;">
+              <li style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:var(--text-muted);">ვირტუალური D-Pad:</span>
+                <span class="pixel-chip">მარცხენა მხარე</span>
+              </li>
+              <li style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:var(--text-muted);">ნახტომის ღილაკი:</span>
+                <span class="pixel-chip chip-gold">ღილაკი [A] (მარჯვნივ)</span>
+              </li>
+              <li style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:var(--text-muted);">დარტყმის ღილაკი:</span>
+                <span class="pixel-chip chip-geo">ღილაკი [B] (მარჯვნივ)</span>
+              </li>
+              <li style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="color:var(--text-muted);">Bluetooth ჯოისტიკი:</span>
+                <span class="pixel-chip" style="background:#14532d; color:#86efac;">ავტომატური</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FEATURES SECTION - Why Mr. Good Rocks
+       =================================================================== -->
+  <section class="section" id="features" style="padding-top:2rem;">
+    <div class="section-header">
+      <span class="section-tag">GAME HIGHLIGHTS</span>
+      <h2 class="section-title" data-i18n="featSectionTitle">რატომ მოგეწონებათ MR. GOOD?</h2>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+      <!-- Feature 1 -->
+      <div class="download-card">
+        <div style="font-size:2.5rem; margin-bottom:1rem;">🎨</div>
+        <h3 style="font-family:var(--font-pixel); font-size:1.1rem; color:var(--gold); margin-bottom:0.5rem;" data-i18n="feat1Title">
+          კლასიკური 2D პიქსელ სტილი
+        </h3>
+        <p style="color:var(--text-muted); font-size:0.95rem;" data-i18n="feat1Desc">
+          16-ბიტიანი რეტრო ვიზუალი, შთაგონებული თბილისის ხედებით, ქართული იუმორითა და თბილი ატმოსფეროთი.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="download-card">
+        <div style="font-size:2.5rem; margin-bottom:1rem;">⚡</div>
+        <h3 style="font-family:var(--font-pixel); font-size:1.1rem; color:var(--gold); margin-bottom:0.5rem;" data-i18n="feat2Title">
+          გამართული PC & მობილური მართვა
+        </h3>
+        <p style="color:var(--text-muted); font-size:0.95rem;" data-i18n="feat2Desc">
+          მორგებული მართვა როგორც სმარტფონის ეკრანზე, ისე PC-ის კლავიატურასა და გეიმპედზე.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="download-card">
+        <div style="font-size:2.5rem; margin-bottom:1rem;">👥</div>
+        <h3 style="font-family:var(--font-pixel); font-size:1.1rem; color:var(--gold); margin-bottom:0.5rem;" data-i18n="feat3Title">
+          5 უნიკალური პერსონაჟი
+        </h3>
+        <p style="color:var(--text-muted); font-size:0.95rem;" data-i18n="feat3Desc">
+          ითამაშეთ მისტერ გუდით ან მისი მეგობრებით — თითოეულს თავისი სიჩქარე და უნარი აქვს.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="download-card">
+        <div style="font-size:2.5rem; margin-bottom:1rem;">✨</div>
+        <h3 style="font-family:var(--font-pixel); font-size:1.1rem; color:var(--gold); margin-bottom:0.5rem;" data-i18n="feat4Title">
+          კარგია კარგია პოზიტივი!
+        </h3>
+        <p style="color:var(--text-muted); font-size:0.95rem;" data-i18n="feat4Desc">
+          მხიარული, ენერგიული განწყობა, ხმოვანი ეფექტები და უამრავი აღმოსაჩენი საიდუმლო.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SCREENSHOTS & ARTWORK GALLERY
+       =================================================================== -->
+  <section class="section" id="screenshots">
+    <div class="section-header">
+      <span class="section-tag">VISUAL SHOWCASE</span>
+      <h2 class="section-title" data-i18n="screensTitle">თამაშის სქრინშოტები</h2>
+      <p class="section-subtitle" data-i18n="screensSub">
+        შეათვალიერეთ მისტერ გუდის რეტრო სამყარო
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Screenshot 1: Authentic User Main Menu -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/mr_good_title_screen.png', 'მთავარი მენიუ & პერსონაჟები (MR. GOOD - KARGIA KARGIA!)')">
+        <img src="assets/images/mr_good_title_screen.png" alt="Mr Good Menu" class="pixel-art">
+        <div class="gallery-overlay">
+          <h4>მთავარი მენიუ (Main Menu)</h4>
+          <p>Mr. Good, Luka, Mariam, Nino, Kato და 114 ოქროს თესლი</p>
+        </div>
+      </div>
+
+      <!-- Screenshot 2: Pixel Gameplay in Tbilisi Old Town -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/pixel_gameplay_screen_1792316163193.jpg', '2D პიქსელ გეიმპლეი - თბილისის აივნები და კიბერ დონე')">
+        <img src="assets/images/pixel_gameplay_screen_1792316163193.jpg" alt="Pixel Gameplay in Tbilisi" class="pixel-art">
+        <div class="gallery-overlay">
+          <h4>თბილისის აივნები & 2D მოქმედება</h4>
+          <p>რეტრო HUD, მტრები, მონეტები და ნახტომები</p>
+        </div>
+      </div>
+
+      <!-- Screenshot 3: Pixel City Alley Hero Banner -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/pixel_hero_banner_1792316134534.jpg', 'მისტერ გუდი - ქართული ნეონის ქუჩები')">
+        <img src="assets/images/pixel_hero_banner_1792316134534.jpg" alt="Pixel Hero Banner" class="pixel-art">
+        <div class="gallery-overlay">
+          <h4>ქართული ნეონის ქუჩები</h4>
+          <p>წვიმიანი რეტრო ქუჩა და მისტერ გუდის საკულტო პლაკატი</p>
+        </div>
+      </div>
+
+      <!-- Screenshot 4: Official Game Icon & Crest -->
+      <div class="gallery-item" onclick="openLightbox('assets/images/mr_good_icon.jpg', 'ოფიციალური ემბლემა - Mr. Good (Six Seven / 76)')">
+        <img src="assets/images/mr_good_icon.jpg" alt="Official Mr Good Emblem" class="pixel-art">
+        <div class="gallery-overlay">
+          <h4>ოფიციალური ემბლემა (Game Icon)</h4>
+          <p>მისტერ გუდი — SIX SEVEN & 76</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FAQ SECTION
+       =================================================================== -->
+  <section class="section" id="faq">
+    <div class="section-header">
+      <span class="section-tag">NEED HELP?</span>
+      <h2 class="section-title" data-i18n="faqTitle">ხშირად დასმული კითხვები</h2>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item open">
+        <button class="faq-question">
+          <span data-i18n="q1">არის თუ არა Mr. Good სრულიად უფასო?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p data-i18n="a1">დიახ! თამაშის ჩამოტვირთვა და თამაში 100% უფასოა როგორც კომპიუტერზე, ისე მობილურზე.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-i18n="q2">შესაძლებელია ოფლაინში თამაში?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p data-i18n="a2">რა თქმა უნდა! ჩამოტვირთვის შემდეგ თამაში ინტერნეტს არ მოითხოვს.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-i18n="q3">როგორ ვითამაშო ჯოისტიკით კომპიუტერზე?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p data-i18n="a3">შეაერთეთ Xbox-ის, PlayStation-ის ან ნებისმიერი USB/Bluetooth ჯოისტიკი — თამაში ავტომატურად ამოიცნობს მას.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span data-i18n="q4">უსაფრთხოა ფაილის ჩამოტვირთვა?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <p data-i18n="a4">სრულიად უსაფრთხოა. ფაილები შემოწმებულია ანტივირუსით და არ შეიცავს არანაირ მავნე პროგრამას.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>MR. GOOD</h2>
+        <p style="color:var(--gold); font-family:var(--font-pixel-alt); margin-bottom:0.75rem;">
+          KARGIA KARGIA! / კარგია კარგია!
+        </p>
+        <p style="font-size:0.95rem; max-width:400px;">
+          ქართული 2D რეტრო პიქსელ თამაში PC-სა და მობილურისთვის. იხტუნეთ, გაერთეთ და დააგროვეთ ოქროს თესლები!
+        </p>
+        <div class="footer-social-links">
+          <a href="#" class="social-btn" title="Discord" onclick="alert('Discord სერვერი: მალე!')">💬</a>
+          <a href="#" class="social-btn" title="YouTube" onclick="alert('YouTube არხი: მალე!')">▶️</a>
+          <a href="#" class="social-btn" title="Telegram" onclick="alert('Telegram ჯგუფი: მალე!')">✈️</a>
+          <a href="#" class="social-btn" title="TikTok" onclick="alert('TikTok: მალე!')">📱</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="navDownload">ჩამოტვირთვა</h4>
+        <ul>
+          <li><a href="#download" onclick="switchDownloadTab('pc')">Windows PC (185 MB)</a></li>
+          <li><a href="#download" onclick="switchDownloadTab('android')">Android APK (78 MB)</a></li>
+          <li><a href="#download" onclick="switchDownloadTab('ios')">iOS TestFlight</a></li>
+          <li><a href="#download" onclick="switchDownloadTab('specs')">სისტემური მოთხოვნები</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>ინფორმაცია</h4>
+        <ul>
+          <li><a href="#features">მახასიათებლები</a></li>
+          <li><a href="#screenshots">სქრინშოტები</a></li>
+          <li><a href="#download" onclick="switchDownloadTab('patch')">განახლებების ისტორია</a></li>
+          <li><a href="#faq">კითხვა-პასუხი</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 MR. GOOD. <span data-i18n="footerRights">ყველა უფლება დაცულია.</span>
+      </div>
+      <div class="georgian-badge" data-i18n="madeInGeorgia">
+        დამზადებულია სიყვარულით საქართველოში 🇬🇪
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       INTERACTIVE DOWNLOAD MODAL
+       =================================================================== -->
+  <div class="dl-modal-overlay" id="downloadModal">
+    <div class="dl-modal-box">
+      <div class="dl-modal-header">
+        <div class="dl-modal-icon pixel-art" style="overflow:hidden; padding:2px;">
+          <img src="assets/images/mr_good_icon.jpg" alt="Mr Good Icon" style="width:100%; height:100%; border-radius:6px; object-fit:cover;">
+        </div>
+        <div class="dl-modal-title">
+          <h3 id="modalTitle">მიმდინარეობს ჩამოტვირთვა...</h3>
+          <p id="modalSub">MR. GOOD - KARGIA KARGIA!</p>
+        </div>
+      </div>
+
+      <div class="dl-progress-wrapper">
+        <div class="dl-progress-meta">
+          <span id="modalProgressPercent">0%</span>
+          <span id="modalSpeedText">24.5 MB/s</span>
+        </div>
+        <div class="dl-progress-bar-bg">
+          <div class="dl-progress-bar-fill" id="modalProgressBar"></div>
+        </div>
+      </div>
+
+      <div class="dl-success-info" id="modalSuccessBox">
+        <div style="font-weight:700; margin-bottom:0.25rem;">✨ ფაილი წარმატებით ჩამოიტვირთა!</div>
+        <div style="font-size:0.85rem; color:var(--text-muted);" id="modalSuccessDesc">
+          შეამოწმეთ თქვენი ბრაუზერის Downloads საქაღალდე.
+        </div>
+      </div>
+
+      <div class="dl-modal-actions">
+        <a id="modalLaunchBtn" class="btn-modal-action btn-gold" href="#" style="display:none;" data-i18n="btnLaunch">
+          ფაილის გახსნა
+        </a>
+        <button class="btn-modal-action btn-purple dl-close-btn" onclick="closeDownloadModal()" data-i18n="btnClose">
+          დახურვა
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       IMAGE LIGHTBOX MODAL
+       =================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">✕</button>
+      <img src="" alt="Screenshot Full View" class="lightbox-img pixel-art" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript Script -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>
